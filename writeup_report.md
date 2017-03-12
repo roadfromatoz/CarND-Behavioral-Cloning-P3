@@ -62,5 +62,5 @@ I went on to collect more data to generalize the training more laps, including m
 
 Another thing I tried is to use side cameras which brings more data for free. However this does not work well in the beginning because I was using a too-large steering offset to compensate the fact that side cameras are off-center. I tuned that angle based on validation set and found 0.1 to be a good choice.
 
-The final video is attached as `video.py`
+The final video is attached as `video.mp4`
 
