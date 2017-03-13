@@ -9,6 +9,11 @@ The goals / steps of this project are the following:
 * Test that the model successfully drives around track one without leaving the road
 * Summarize the results with a written report
 
+[//]: # (Image References)
+
+[image1]: ./three_camera.png "View from three cameras"
+[image2]: ./steering_angle.png "Histogram of steering angles"
+
 ## Rubric Points
 ###Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/432/view) individually and describe how I addressed each point in my implementation.  
 
@@ -53,6 +58,12 @@ The model used a default adam optimizer, so the learning rate was not tuned manu
 ####4. Appropriate training data
 
 This is covered in question 2.
+
+The data consists of cameras from left, center and right, as shown below. You may notice the car is slightly towards the left, therefore yielding a positive steering angle to the right.
+![alt text][image1]
+
+The following plot shows a histogram of steering angles. 0 seems to be dominant while a little more left turns (given more laps were collected in anti-clockwise direction). Flipping the image helped in balancing the output and not giving unfair preference to left turns.
+![alt text][image2]
 
 ###Model Architecture and Training Strategy
 
